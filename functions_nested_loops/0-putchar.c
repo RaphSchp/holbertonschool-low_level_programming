@@ -5,7 +5,8 @@
  * Description: Print _putchar, followed by a new line.
  * Return: Zero value
  */
-int main(void) {
-    printf("_putchar\n");
-    return 0;
+int main(void) 
+{
+	printf("_putchar\n");
+	return (0);
 }
