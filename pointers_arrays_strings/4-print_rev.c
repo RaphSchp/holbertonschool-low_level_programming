@@ -7,9 +7,11 @@
  */
 void print_rev(char *s)
 {
-	while (*str)
+	while (*s != NULL)
+		s++;
+	while
 	{
-		_putchar(*str);
+		_putchar(*s);
 		str--;
 	}
 	_putchar('\n');
