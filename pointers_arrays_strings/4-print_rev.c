@@ -7,10 +7,10 @@
  */
 void print_rev(char *s)
 {
-	while (*s)
+	while (*str)
 	{
-		_putchar(*s);
-		s--;
+		_putchar(*str);
+		str--;
 	}
 	_putchar('\n');
 }
