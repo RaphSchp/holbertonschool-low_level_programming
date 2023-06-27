@@ -2,20 +2,22 @@
 #include <stddef.h>
 
 /**
- * rev_string - a function that reverses a string.
- * @s: a string
+ * rev_string - Reverses a string.
+ * @s: The string to be reversed.
  */
-
 void rev_string(char *s)
 {
 	int length, index;
 	char *begin, *end, character;
 
-	length = _strlen(s);
+	length = 0;
+	while (s[length] != '\0')
+		length++;
+
 	begin = s;
 	end = s + length - 1;
 
-	for (index = 0; index < (length - 1) / 2; index++)
+	for (index = 0; index < length / 2; index++)
 	{
 		character = *end;
 		*end = *begin;
@@ -26,21 +28,3 @@ void rev_string(char *s)
 	}
 }
 
-/**
- * _strlen - a function that returns the length of a string
- * @s: a function who's been count
- * Return: count
- */
-
-int _strlen(char *s)
-{
-	int count = 0;
-
-	while (*s)
-	{
-		count++;
-		s++;
-	}
-
-	return (count);
-}
