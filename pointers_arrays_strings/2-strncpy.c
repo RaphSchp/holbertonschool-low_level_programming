@@ -27,6 +27,6 @@ char *_strncpy(char *dest, char *src, int n)
 		n--;
 	}
 
-	return o_dest;
+	return (o_dest);
 }
 
