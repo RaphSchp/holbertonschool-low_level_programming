@@ -5,9 +5,9 @@
  * @s: pointer to the string to search
  * @accept: pointer to the string containing the accepted characters
  *
- * Return: length
+ * Return: (length) the number of bytes in the initial segment of s
+ *         consisting only of bytes from accept
  */
-
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int length = 0;
@@ -16,7 +16,8 @@ unsigned int _strspn(char *s, char *accept)
 	while (*s && found)
 	{
 		found = 0;
-		for (int i = 0; accept[i]; i++)
+
+		for (unsigned int i = 0; accept[i]; i++)
 		{
 			if (*s == accept[i])
 			{
@@ -25,7 +26,9 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 			}
 		}
-		s++;
+
+		if (found)
+			s++;
 	}
 
 	return (length);
