@@ -8,12 +8,11 @@
  *
  * Return: void
  */
-
 void print_diagsums(int *a, int size)
 {
     int row;
-    int sum1 = 0; // Sum of the main diagonal
-    int sum2 = 0; // Sum of the secondary diagonal
+    int sum1 = 0; /* Sum of the main diagonal */
+    int sum2 = 0; /* Sum of the secondary diagonal */
 
     for (row = 0; row < size; row++)
     {
@@ -21,6 +20,6 @@ void print_diagsums(int *a, int size)
         sum2 += *(a + (row * size) + (size - 1 - row));
     }
 
-    printf("%d, %d\n", sum1, sum2); // Print the sums using printf
+    printf("%d, %d\n", sum1, sum2);
 }
 
