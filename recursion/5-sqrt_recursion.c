@@ -3,21 +3,33 @@
 /**
  * sqrt_helper - Recursive helper function to calculate the square root
  * @n: The number to calculate the square root of
- * @i: The current number to check for square root
+ * @guess: The current guess for the square root
  *
- * Return: The natural square root of n, or -1 if it does not have one
+ * Return: The square root of n if it has a natural square root,
+ *         -1 otherwise.
  */
-int sqrt_helper(int n, int i)
+int sqrt_helper(int n, int response)
 {
-    if (n < 0)
-        return (-1);
-    if (n == 0 || n == 1)
-        return (n);
-
-    if (i * i > n)
-        return (-1);
-    if (i * i == n)
-        return (i);
-
-    return (sqrt_helper(n, i + 1));
+	if (response * response == n)
+		return (response);
+	else if (response * response > n)
+		return (-1);
+	else
+		return (sqrt_helper(n, response + 1));
 }
+
+/**
+ * _sqrt_recursion - Returns the natural square root of a number
+ * @n: The number to calculate the square root of
+ *
+ * Return: The square root of n if it has a natural square root,
+ *         -1 otherwise.
+ */
+int _sqrt_recursion(int n)
+{
+	if (n < 0)
+		return (-1);
+
+	return (sqrt_helper(n, 1));
+}
+
