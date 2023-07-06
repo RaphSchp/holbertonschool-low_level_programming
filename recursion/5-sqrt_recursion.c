@@ -8,14 +8,14 @@
  * Return: The square root of n if it has a natural square root,
  *         -1 otherwise.
  */
-int sqrt_helper(int n, int response)
+int sqrt_helper(int n, int guess)
 {
-	if (response * response == n)
-		return (response);
-	else if (response * response > n)
+	if (guess * guess == n)
+		return (guess);
+	else if (guess * guess > n)
 		return (-1);
 	else
-		return (sqrt_helper(n, response + 1));
+		return (sqrt_helper(n, guess + 1));
 }
 
 /**
