@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 				if (!isdigit(argv[i][j]))
 				{
 					printf("Error\n");
-					return 1;
+					return (1);
 				}
 			}
 			sum += atoi(argv[i]);
@@ -35,6 +35,5 @@ int main(int argc, char *argv[])
 		printf("0\n");
 	}
 
-	return 0;
+	return (0);
 }
-
