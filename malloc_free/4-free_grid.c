@@ -1,5 +1,4 @@
 #include "main.h"
-#include <sdlib.h>
 
 /**
  * free_grid - Frees a 2D array of integers.
