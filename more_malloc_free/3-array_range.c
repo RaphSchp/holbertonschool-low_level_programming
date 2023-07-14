@@ -2,28 +2,28 @@
 #include <stdlib.h>
 
 /**
- * array_range - Crée un tableau d'entiers
- * @min: Valeur minimale (incluse)
- * @max: Valeur maximale (incluse)
+ * array_range - Creates an array of integers
+ * @min: Minimum value (inclusive)
+ * @max: Maximum value (inclusive)
  *
- * Return: Pointeur vers le tableau nouvellement créé
- *         NULL si min > max ou en cas d'échec de malloc
+ * Return: (Success) Pointer to the newly created array
+ *         (Failure) NULL if min > max or if malloc fails
  */
 int *array_range(int min, int max)
 {
-    int *array, size, i;
+	int *array, size, i;
 
-    if (min > max)
-        return (NULL);
+	if (min > max)
+		return (NULL);
 
-    size = max - min + 1;
-    array = malloc(size * sizeof(int));
-    if (array == NULL)
-        return (NULL);
+	size = max - min + 1;
+	array = malloc(size * sizeof(int));
+	if (array == NULL)
+		return (NULL);
 
-    for (i = 0; i < size; i++)
-        array[i] = min++;
+	for (i = 0; i < size; i++)
+		array[i] = min++;
 
-    return (array);
+	return (array);
 }
 
