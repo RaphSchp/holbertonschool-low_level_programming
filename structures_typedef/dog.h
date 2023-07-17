@@ -17,7 +17,13 @@ struct dog
 	char *name;
 	float age;
 	char *owner;
-};
+}
+
+/**
+ * dog_t - change name of dog structure
+ */
+
+typedef struct dog dog_t;
 
 struct dog *new_user(char *name, float age, char *owner);
 void init_dog(struct dog *d, char *name, float age, char *owner);
