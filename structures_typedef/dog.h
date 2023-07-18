@@ -10,6 +10,8 @@
  * @name: name of the dog
  * @age: age of the dog
  * @owner: owner of the dog
+ *
+ * dog_t - change name of dog structure
  */
 
 struct dog
@@ -18,10 +20,6 @@ struct dog
 	float age;
 	char *owner;
 };
-
-/**
- * dog_t - change name of dog structure
- */
 
 typedef struct dog dog_t;
 
