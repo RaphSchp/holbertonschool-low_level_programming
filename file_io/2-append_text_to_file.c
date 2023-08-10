@@ -1,4 +1,5 @@
 #include "main.h"
+#include <fcntl.h>
 
 /**
  * _strlen - compute the length of a NULL-terminated string
